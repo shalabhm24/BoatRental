@@ -1,0 +1,22 @@
+USE [BoatRental]
+GO
+
+/****** Object:  Table [dbo].[tblRegister]    Script Date: 16-09-2020 11:49:00 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tblRegister](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[BoatName] [varchar](100) NOT NULL,
+	[HourlyRate] [int] NOT NULL,
+ CONSTRAINT [PK_tblRegister] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
