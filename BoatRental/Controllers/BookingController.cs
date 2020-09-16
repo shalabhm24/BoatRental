@@ -20,7 +20,6 @@ namespace BoatRental.Controllers
         {
             return View();
         }
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("BoatId,CustomerName")] TblBooking tblBooking)
@@ -39,21 +38,15 @@ namespace BoatRental.Controllers
                     _context.Add(tblBooking);
                     await _context.SaveChangesAsync();
                     ViewBag.Message = "Booking Confirmed!!!";
-                    //return View();
 
                 }
                 else
                 {
                     ViewBag.Message = "Boat Number is Invalid";
-                    //return View();
                 }
         
             }
             return View();
         }
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
     }
 }
